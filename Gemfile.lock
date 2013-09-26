@@ -1,0 +1,95 @@
+GIT
+  remote: git://github.com/thoughtworks/pacto.git
+  revision: cac060f4bb6177474a798901e777b7aa40a4f6e4
+  branch: issue32
+  specs:
+    pacto (0.2.5)
+      addressable
+      coveralls
+      hash-deep-merge
+      httparty
+      json
+      json-generator
+      json-schema (~> 2.0)
+      webmock
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.5)
+    async-rack (0.5.1)
+      rack (~> 1.1)
+    coderay (1.0.9)
+    coveralls (0.7.0)
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      term-ansicolor
+      thor
+    crack (0.4.1)
+      safe_yaml (~> 0.9.0)
+    em-synchrony (1.0.3)
+      eventmachine (>= 1.0.0.beta.1)
+    em-websocket (0.3.8)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
+    eventmachine (1.0.3)
+    goliath (1.0.3)
+      async-rack
+      em-synchrony (>= 1.0.0)
+      em-websocket (= 0.3.8)
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (= 0.6.0.beta.2)
+      log4r
+      multi_json
+      rack (>= 1.2.2)
+      rack-contrib
+      rack-respond_to
+    hash-deep-merge (0.1.1)
+    http_parser.rb (0.6.0.beta.2)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    json (1.8.0)
+    json-generator (0.1.0)
+      json-schema
+    json-schema (2.1.3)
+    log4r (1.1.10)
+    method_source (0.8.2)
+    mime-types (1.25)
+    multi_json (1.8.0)
+    multi_xml (0.5.5)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rack (1.5.2)
+    rack-accept-media-types (0.9)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
+    rack-respond_to (0.9.8)
+      rack-accept-media-types (>= 0.6)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    safe_yaml (0.9.7)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
+    slop (3.4.6)
+    term-ansicolor (1.2.2)
+      tins (~> 0.8)
+    thor (0.18.1)
+    tins (0.11.0)
+    webmock (1.13.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  goliath
+  httparty
+  pacto!
+  pry

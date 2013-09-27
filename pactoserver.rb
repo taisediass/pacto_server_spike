@@ -7,7 +7,7 @@ class PactoServer < Goliath::API
   	path = env[Goliath::Request::REQUEST_PATH]
   	headers = env['client-headers']
   	resp = HTTParty.get("http://www.mydomain.com:9001#{path}", headers: headers)
-  	[200, {}, resp.body]
+  	[resp.code, resp.headers, resp.body]
 	end
 
 	def options_parser(opts, options)

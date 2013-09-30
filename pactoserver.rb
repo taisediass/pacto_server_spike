@@ -4,10 +4,15 @@ require 'httparty'
 class PactoServer < Goliath::API
 
 	def response (env)
-  	path = env[Goliath::Request::REQUEST_PATH]
+    path = env[Goliath::Request::REQUEST_PATH]
   	headers = env['client-headers']
-  	resp = HTTParty.get("http://www.mydomain.com:9001#{path}", headers: headers)
-  	[resp.code, resp.headers, resp.body]
+    begin
+  	 resp = HTTParty.get("#{config[:backend]}#{path}")
+     code = resp.code
+     [resp.code, resp.headers, resp.body]
+    rescue => e
+      [500, {}, e.message]
+    end
 	end
 
 	def options_parser(opts, options)
@@ -15,6 +20,7 @@ class PactoServer < Goliath::API
     options[:directory] = "."
 		opts.on('-m', '--match-strict', 'Should enforce headers strict matching') { |val| options[:strict] = true }
     opts.on('-x', '--contracts_dir DIR', 'Directory that contains the contracts to be registered') { |val| options[:directory] = val }
+    opts.on('-H', '--host HOST', 'Host of the real service, for validating live requests') { |val| options[:backend_host] = val }
 	end
 
   def on_headers(env, headers)

@@ -1,0 +1,7 @@
+TODO
+[ ] build_from_file em todos os contratos com tags
+[ ] pegar retorno e chamar register_contracts(contrat, tags) 
+
+USO
+Pacto.use(tag_registrada)
+Pacto.

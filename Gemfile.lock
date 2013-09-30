@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/thoughtworks/pacto.git
-  revision: cac060f4bb6177474a798901e777b7aa40a4f6e4
+  revision: 6ec49857e2875faaced778d0503559757769a42d
   branch: issue32
   specs:
     pacto (0.2.5)

@@ -12,7 +12,9 @@ class PactoServer < Goliath::API
 
 	def options_parser(opts, options)
 		options[:strict] = false
+    options[:directory] = "."
 		opts.on('-m', '--match-strict', 'Should enforce headers strict matching') { |val| options[:strict] = true }
+    opts.on('-x', '--contracts_dir DIR', 'Directory that contains the contracts to be registered') { |val| options[:directory] = val }
 	end
 
   def on_headers(env, headers)

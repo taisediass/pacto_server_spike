@@ -1,7 +1,7 @@
 GIT
-  remote: git://github.com/thoughtworks/pacto.git
-  revision: 6ec49857e2875faaced778d0503559757769a42d
-  branch: issue32
+  remote: https://github.com/taisediass/pacto.git
+  revision: 6d1ce1e9c13d4f1905404b809530c1466a44e861
+  branch: server_fixes
   specs:
     pacto (0.2.5)
       addressable

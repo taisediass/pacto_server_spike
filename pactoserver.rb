@@ -9,9 +9,11 @@ class PactoServer < Goliath::API
     path = env[Goliath::Request::REQUEST_PATH]
   	headers = env['client-headers']
     begin
-      uri = "#{config[:backend]}#{path}"
-      puts "Calling #{uri}"
-  	 resp = HTTParty.get(uri)
+     uri = "#{config[:backend]}#{path}"
+     puts uri
+     safe_headers = headers.select {|k,v| k.downcase != 'host' }
+     puts safe_headers
+  	 resp = HTTParty.get(uri, headers: safe_headers)
      code = resp.code
      [resp.code, resp.headers, resp.body]
     rescue => e

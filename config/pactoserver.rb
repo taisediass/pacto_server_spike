@@ -29,9 +29,7 @@ end
 
 config[:live] = options[:backend_host].nil?
 config[:backend] = options[:backend_host] ||= 'http://example.com'
-
 ::Pacto.load_all(options[:directory], config[:backend])
-
 if config[:live]
   ::Pacto.use(:default)
 else

@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem 'pacto', :git => 'git://github.com/thoughtworks/pacto.git', :branch => 'issue32'
+gem 'pacto', :git => 'git://github.com/thoughtworks/pacto.git', :branch => 'experimental'
 gem 'goliath'
 gem 'pry'
 gem 'httparty'
+gem 'fog'

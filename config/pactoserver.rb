@@ -16,7 +16,9 @@ end
 
 ::Pacto.configure do |c|
   c.strict_matchers = options[:strict]
+  c.preprocessor = nil
   c.register_callback do |contracts, req, resp|
+    Pacto::Hooks::ERBHook.new.process contracts, req, resp
     contracts.each do |contract|
       violations = contract.validate(resp)
       raise violations.join("\n") unless violations.empty?

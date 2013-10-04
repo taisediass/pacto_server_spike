@@ -6,7 +6,7 @@ module ::Pacto
   class << self
     def load_all(contracts_directory, host, *tags)
       contracts = Dir["#{contracts_directory}/**.json"]
-      contracts.each do |contract_file| 
+      contracts.each do |contract_file|
         contract = ::Pacto.build_from_file(contract_file, host)
         ::Pacto.register_contract(contract, *tags)
       end

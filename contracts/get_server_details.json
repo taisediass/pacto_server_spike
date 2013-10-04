@@ -5,7 +5,7 @@
         }, 
         "method": "GET", 
         "params": {}, 
-        "path": "/v2/tenant_id/servers/server_id"
+        "path": "/v2/:tenant_id/servers/:server_id"
     }, 
     "response": {
         "headers": {
